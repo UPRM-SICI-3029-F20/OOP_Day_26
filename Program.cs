@@ -87,23 +87,32 @@ namespace OOP_Day_26
         public abstract override string FunFact();
     }
 
-    class Dog : Canine
+
+    interface IPet
+    {
+        string VaccinationDate { get; set; }
+    }
+
+
+    class Dog : Canine, IPet
     {
         public override string FunFact()
         {
             //return "Dog has successfully buried a bone.";
             return "Dogs love to bury bones in the yard.";
         }
-
+        public string VaccinationDate { get; set; }
     }
 
-    class Cat : Feline
+    class Cat : Feline, IPet
     {
         public override string FunFact()
         {
             //return "Cat chased the mouse away!";
             return "Cats love to chase mice";
         }
+
+        public string VaccinationDate { get; set; }
     }
 
     class Wolf : Animal
