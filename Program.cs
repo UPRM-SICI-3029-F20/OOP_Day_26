@@ -31,19 +31,19 @@ namespace OOP_Day_26
             //Animal fulano = new Animal();
 
             WriteLine(spot);
-            WriteLine(spot.BuryBone());
+            WriteLine(spot.FunFact());
 
             WriteLine(puff);
-            WriteLine(puff.ChaseMouse());
+            WriteLine(puff.FunFact());
 
            //WriteLine(snow);
-            WriteLine(snow.WolfHowls());
+            WriteLine(snow.FunFact());
 
             //WriteLine(happy);
-            WriteLine(happy.HippoBath());
+            WriteLine(happy.FunFact());
 
-            WriteLine(tony.TigerFact());
-            WriteLine(king.LionFact());
+            WriteLine(tony.FunFact());
+            WriteLine(king.FunFact());
 
 
         }
@@ -53,7 +53,7 @@ namespace OOP_Day_26
 
     // string[] <<-- included as part of the language
 
-    class Animal
+    abstract class Animal
     {
         // Properties, attrributes, fields, 
         public string Name { get; set; }  // setter & getters
@@ -73,44 +73,48 @@ namespace OOP_Day_26
                    "  Age:" + Age +
                    "  Diet:" + Diet;
         }
+
+        public abstract string FunFact();
     }
 
     class Dog : Animal
     {
-        public string BuryBone()
+        public override string FunFact()
         {
-            return "Dog has successfully buried a bone.";
+            //return "Dog has successfully buried a bone.";
+            return "Dogs love to bury bones in the yard.";
         }
 
     }
 
     class Cat : Animal
     {
-        public string ChaseMouse()
+        public override string FunFact()
         {
-            return "Cat chased the mouse away!";
+            //return "Cat chased the mouse away!";
+            return "Cats love to chase mice";
         }
     }
 
     class Wolf : Animal
     {
-        public string WolfHowls()
+        public override string FunFact()
         {
-            return "Wolf howls at the full moon.";
+            return "Wolf howl at the full moon.";
         }
     }
 
     class Hippo : Animal
     {
-         public string HippoBath()
+        public override string FunFact()
         {
-            return "Hippopotamus bathes in the cool mud.";
+            return "Hippopotamus love to bathes in the cool mud.";
         }
     }
 
     class Tiger : Animal
     {
-        public string TigerFact()
+        public override string FunFact()
         {
             return "The tiger is the biggest species of the cat family.";
         }
@@ -118,7 +122,7 @@ namespace OOP_Day_26
 
     class Lion : Animal
     {
-        public string LionFact()
+        public override string FunFact()
         {
             return "The roar of a lion can be heard from 5 miles away.";
         }
