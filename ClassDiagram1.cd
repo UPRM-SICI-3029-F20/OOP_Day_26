@@ -10,12 +10,12 @@
   <Class Name="OOP_Day_26.Animal">
     <Position X="2.5" Y="0.5" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAACAACAAAAAAAAEAEAAAAQAAABAAAAABAAAgAAAAgA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAEAEAAAAQAAABAAAAABAAAgAAAAgA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OOP_Day_26.Wolf">
-    <Position X="5.25" Y="7" Width="1.25" />
+    <Position X="5.25" Y="7.25" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -24,13 +24,13 @@
   <Class Name="OOP_Day_26.Cat">
     <Position X="2.75" Y="5.25" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="OOP_Day_26.Tiger">
-    <Position X="2.25" Y="7" Width="1.25" />
+    <Position X="2.25" Y="7.25" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -39,20 +39,20 @@
   <Class Name="OOP_Day_26.Dog">
     <Position X="0.5" Y="5.25" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="OOP_Day_26.Hippo">
-    <Position X="0.5" Y="7" Width="1.25" />
+    <Position X="0.5" Y="7.25" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OOP_Day_26.Lion">
-    <Position X="3.75" Y="7" Width="1.25" />
+    <Position X="3.75" Y="7.25" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -72,10 +72,25 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="OOP_Day_26.IPet">
-    <Position X="4" Y="2.25" Width="1.5" />
+  <Class Name="OOP_Day_26.Robot">
+    <Position X="6.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOP_Day_26.RoboDog">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="OOP_Day_26.IPet">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Interface>

@@ -62,8 +62,6 @@ namespace OOP_Day_26
         public Diet Diet { get; set; }
         public string Sound { get; set; }
         public string Id { get; set; }
-        public string Owner { get; set; }
-
 
         // Methods, Functions, Behaviours 
         public override string ToString()
@@ -87,10 +85,19 @@ namespace OOP_Day_26
         public abstract override string FunFact();
     }
 
-
     interface IPet
     {
-        string VaccinationDate { get; set; }
+        public string Owner { get; set; }
+    }
+
+    class Robot
+    {
+
+    }
+
+    class RoboDog : Robot, IPet
+    {
+        public string Owner { get; set; }
     }
 
 
@@ -101,7 +108,7 @@ namespace OOP_Day_26
             //return "Dog has successfully buried a bone.";
             return "Dogs love to bury bones in the yard.";
         }
-        public string VaccinationDate { get; set; }
+        public string Owner { get; set; }
     }
 
     class Cat : Feline, IPet
@@ -112,7 +119,7 @@ namespace OOP_Day_26
             return "Cats love to chase mice";
         }
 
-        public string VaccinationDate { get; set; }
+        public string Owner { get; set; }
     }
 
     class Wolf : Animal
