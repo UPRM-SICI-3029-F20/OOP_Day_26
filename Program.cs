@@ -77,7 +77,17 @@ namespace OOP_Day_26
         public abstract string FunFact();
     }
 
-    class Dog : Animal
+    abstract class Canine : Animal
+    {
+        public abstract override string FunFact();
+    }
+
+    abstract class Feline : Animal
+    {
+        public abstract override string FunFact();
+    }
+
+    class Dog : Canine
     {
         public override string FunFact()
         {
@@ -87,7 +97,7 @@ namespace OOP_Day_26
 
     }
 
-    class Cat : Animal
+    class Cat : Feline
     {
         public override string FunFact()
         {
