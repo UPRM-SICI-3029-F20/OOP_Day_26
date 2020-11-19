@@ -31,19 +31,19 @@ namespace OOP_Day_26
             //Animal fulano = new Animal();
 
             WriteLine(spot);
-            WriteLine(spot.BuryBone());
+            WriteLine(spot.FunFact());
 
             WriteLine(puff);
-            WriteLine(puff.ChaseMouse());
+            WriteLine(puff.FunFact());
 
            //WriteLine(snow);
-            WriteLine(snow.WolfHowls());
+            WriteLine(snow.FunFact());
 
             //WriteLine(happy);
-            WriteLine(happy.HippoBath());
+            WriteLine(happy.FunFact());
 
-            WriteLine(tony.TigerFact());
-            WriteLine(king.LionFact());
+            WriteLine(tony.FunFact());
+            WriteLine(king.FunFact());
 
 
         }
@@ -53,7 +53,7 @@ namespace OOP_Day_26
 
     // string[] <<-- included as part of the language
 
-    class Animal
+    abstract class Animal
     {
         // Properties, attrributes, fields, 
         public string Name { get; set; }  // setter & getters
@@ -62,8 +62,6 @@ namespace OOP_Day_26
         public Diet Diet { get; set; }
         public string Sound { get; set; }
         public string Id { get; set; }
-        public string Owner { get; set; }
-
 
         // Methods, Functions, Behaviours 
         public override string ToString()
@@ -73,28 +71,89 @@ namespace OOP_Day_26
                    "  Age:" + Age +
                    "  Diet:" + Diet;
         }
+
+        abstract public string FunFact();  // no-body
     }
 
-    class Dog : Animal
+    interface IPet
     {
-        public string BuryBone()
+        // public & abstact
+        string Owner { get; set; }
+        void BeFriendly();
+        void Play();
+    }
+
+    class Robot
+    {
+
+    }
+
+    class RoboDog : Robot, IPet
+    {
+        public string Owner { get; set; }
+        public void BeFriendly()
         {
-            return "Dog has successfully buried a bone.";
+            // TO DO 
+            WriteLine("Be friendly");
+        }
+        public void Play()
+        {
+            // TO DO
+            WriteLine("Play");
+        }
+    }
+
+    abstract class Canine : Animal
+    {
+        abstract override public string FunFact();  // no-body
+    }
+
+    abstract class Feline : Animal
+    {
+        abstract override public string FunFact();  // no-body
+    }
+
+    class Dog : Canine, IPet
+    {
+        public override string FunFact()
+        {
+            return "Dogs love to bury bones in the yard.";
+        }
+
+        public string Owner { get; set; }
+        public void BeFriendly() {
+            // TO DO 
+            WriteLine("Be friendly");
+        }
+        public void Play() {
+            // TO DO
+            WriteLine("Play");
         }
 
     }
 
-    class Cat : Animal
+    class Cat : Feline, IPet
     {
-        public string ChaseMouse()
+        public override string FunFact()
         {
-            return "Cat chased the mouse away!";
+            return "Cats love to chase mice";
+        }
+        public string Owner { get; set; }
+        public void BeFriendly()
+        {
+            // TO DO 
+            WriteLine("Be friendly");
+        }
+        public void Play()
+        {
+            // TO DO
+            WriteLine("Play");
         }
     }
 
-    class Wolf : Animal
+    class Wolf : Canine
     {
-        public string WolfHowls()
+        public override string FunFact()
         {
             return "Wolf howls at the full moon.";
         }
@@ -102,23 +161,23 @@ namespace OOP_Day_26
 
     class Hippo : Animal
     {
-         public string HippoBath()
+         public override string FunFact()
         {
-            return "Hippopotamus bathes in the cool mud.";
+            return "Hippopotamus love to bathes in the cool mud.";
         }
     }
 
-    class Tiger : Animal
+    class Tiger : Feline
     {
-        public string TigerFact()
+        public override string FunFact()
         {
             return "The tiger is the biggest species of the cat family.";
         }
     }
 
-    class Lion : Animal
+    class Lion : Feline
     {
-        public string LionFact()
+        public override string FunFact()
         {
             return "The roar of a lion can be heard from 5 miles away.";
         }
